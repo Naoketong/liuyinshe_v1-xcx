@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "pd-tips": "/components/tips/tips"
+  }
+}

@@ -1,0 +1,35 @@
+<pd-loading is-show="{{!pageShow}}"></pd-loading>
+<view class="page-container" wx:if="{{pageShow}}">
+  <view class="lesson-section">
+    <view class="lesson-title" wx:if="{{false}}">
+      <text>有特殊情况，可提前请假 ～</text>
+    </view>
+    <view class="lesson-list">
+      <view class="lesson-item lesson-item-th">
+        <view class="lesson-item-index">课时</view>
+        <view class="lesson-item-date">日期</view>
+        <view class="lesson-item-time">开始</view>
+        <view class="lesson-item-time">结束</view>
+        <view class="lesson-item-status">状态</view>
+      </view>
+      <view class="lesson-item" wx:for="{{lessons}}" wx:key="{{index}}">
+        <view class="lesson-item-index">{{index + 1}}</view>
+        <view class="lesson-item-date">{{item.date}}</view>
+        <view class="lesson-item-time">{{item.start_time}}</view>
+        <view class="lesson-item-time">{{item.end_time}}</view>
+        <view class="lesson-item-status">
+          <text wx:if="{{ item.status == 1 }}" class="green">已上课</text>
+          <text wx:if="{{ item.status == 2 }}" class="blue" >已请假</text>
+          <text wx:if="{{ item.status == 0 || !item.status && showApply }}" class="apply-btn"
+            bindtap="handleApplyLeave" 
+            data-index="{{index}}" 
+            data-id="{{item.id}}" 
+            data-lesson_id="{{item.lesson_id}}"
+            data-class_id="{{item.class_id}}"
+            data-user_id="{{item.user_id}}">请假</text>
+          <text wx:if="{{ item.status == 0 || !item.status && !showApply}}" class="grey">未上课</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

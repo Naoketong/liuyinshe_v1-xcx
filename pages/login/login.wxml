@@ -1,0 +1,13 @@
+<pd-tips id="pd-tips"></pd-tips>
+<view class="container">
+  <view class="login-title">
+    <image class="login-title-logo" src="https://qccdata.qichacha.com/AutoImage/29bee9a3af285c0b1c98d9796b6e1c67.jpg?x-oss-process=image/resize,w_120"></image>
+    <view class="login-title_text">留音社</view>
+  </view>
+  <view class="login-title_sub">小具影响力的音乐教育</view>
+  <view class="login-content">
+    <input class="login-input" bindinput="loginName"  placeholder="请输入用户名" />
+    <input class="login-input" bindinput="loginPhone" placeholder="请输入用户电话"/>
+  </view>
+  <button class="login-button" open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录</button>
+</view>

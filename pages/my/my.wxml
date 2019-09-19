@@ -1,0 +1,35 @@
+<view class="page-container" >
+    <view class="user-info user-section">
+        <image class="user-imgUrl" src="{{userInfo.avatarUrl}}"></image>
+        <view class="user-nickName">{{userInfo.nickName}}</view>
+    </view>
+    <view class="my-section">
+        <view class="pd-cells mb-40">
+            <view class="pd-cell">
+                <view class="pd-cell__bd">微信</view>
+                <view class="pd-cell__ft">{{userInfo.nickName}}</view>
+            </view>
+            <view class="pd-cell">
+                <view class="pd-cell__bd">学员姓名</view>
+                <view class="pd-cell__ft">{{userInfo.name}}</view>
+            </view>
+            <view class="pd-cell">
+                <view class="pd-cell__bd">手机号</view>
+                <view class="pd-cell__ft">{{userInfo.phone}}</view>
+            </view>
+        </view>
+        <view class="pd-cells mb-40">
+            <view class="pd-cell" hover-class="pd-cell_hover">
+                <view class="pd-cell__bd">联系我们</view>
+                <view class="pd-cell__ft pd-cell__ft_in-access">语言琴预约 </view>
+                <button id="feedback_contact_click" class="kefu" open-type="contact"></button>
+            </view>
+        </view>
+        <view class="pd-cells">
+            <view class="pd-cell">
+                <view class="pd-cell__bd">版本</view>
+                <view class="pd-cell__ft">v1.0.0</view>
+            </view>
+        </view>
+    </view>
+</view>

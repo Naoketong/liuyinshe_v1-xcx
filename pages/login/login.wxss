@@ -1,0 +1,53 @@
+page{
+	background-color: #F2F6FC;
+}
+.container{}
+.login-title{
+	text-align: center;
+}
+.login-title-logo{
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+.login-title_text{
+	display: inline-block;
+	font-size: 26px;
+	color: #303133;
+	vertical-align: middle;
+	font-weight: 600;
+	font-family:  KaiTi;
+}
+.login-title_sub{
+	margin-top: 10px;
+	font-size: 15px;
+	color: #606266;
+}
+.login-content{
+	margin-top: 40px;
+	width: 70%;
+	height: 150px;
+	/*border:1px solid #909399;*/
+	/*background-color: #fff;*/
+	/*border-radius: 10px;*/
+	padding:20px;
+}
+.login-input{
+	background-color: #fff;
+	margin-bottom: 20px;
+	height: 48px;
+	padding-left: 10px;
+	color:#606266;
+}
+.login-button{
+	width: 60%;
+	text-align: center;
+	background-color: #409EFF;
+  border-color: #409EFF;
+  font-size: 23px;
+  line-height: 50px;
+  color: #fff;
+  border-radius: 6px;
+}

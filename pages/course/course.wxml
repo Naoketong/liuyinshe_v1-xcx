@@ -1,0 +1,16 @@
+<view class="container">
+	<view class="container-title">课程</view>
+	<view class="content-list">
+		<view class="content-item" wx:for="{{course}}"  wx:key="id">
+			<view class="content-left">
+				<view class="content-left-item"></view>
+			</view>
+			<view class="content-right">
+				<view class="course-title">{{item.name}}</view>
+				<view class="course-teacher">{{item.teacher}}</view>
+				<view class="course-description">{{item.description}}</view>
+			</view>
+		</view>
+	</view>
+	<navigator class="go-page_home" url="/pages/index/index">返回首页</navigator>
+</view>

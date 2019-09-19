@@ -1,0 +1,50 @@
+<pd-loading is-show="{{!pageShow}}"></pd-loading>
+<view class="container" wx:if="{{pageShow}}">  
+  <view class="course-top">
+    <view class="course-top_title">留音社</view>
+    <view class="course-pers">
+      <image class="user-avatar" src="{{userInfo.avatarUrl}}"></image>
+      <navigator url="/pages/my/my" class="user-button">个人中心</navigator>
+      <view class="user-right">
+        <view class="user-name">{{userInfo.nickName}}</view>
+        <view class="user-desc">欢迎来到留音社！</view>
+        <view class="user-tips">
+          <view>音乐，是一种信仰！</view>
+          <view>前进吧{{userInfo.nickName}}<!-- 杰尼龟 -->！</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="classes-section">
+    <view class="classes-title">我的课程</view>
+    <navigator url="/pages/lesson/lesson?class_id={{item.id}}&course_id={{item.course_id}}" class="classes-content" wx:for="{{classes}}" wx:key="{{index}}">
+      <view class="classes-item left">{{item.name}}</view>
+      <view class="classes-item right">
+        <view class="classes-item-text">
+          <view class="item-text-title">开班时间</view>
+          <view class="item-text-desc">{{item.start_at}}</view>
+        </view>
+        <view class="classes-item-text">
+          <view class="item-text-title">结束时间</view>
+          <view class="item-text-desc">{{item.end_at}}</view>
+        </view>
+      </view>
+    </navigator>
+  </view>
+  <view class="course-container">
+    <view class="course-kind">课程体系</view>
+    <view class="course-section" wx:for="{{course}}" wx:key="{{index}}">
+        <view class="course-content left">
+          <view class="course-title">{{item.name}}</view>
+          <view class="course-item top">{{item.description}}</view>
+          <view class="course-item">导师：{{item.teacher}}</view>
+        </view>
+        <view class="course-content right">
+          <view class="course-right-item">
+            <view class="course-number">195人报班</view>
+          </view>
+        </view>
+    </view>
+  </view>
+</view>
+
